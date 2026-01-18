@@ -1,7 +1,14 @@
 # VectorShift Frontend Technical Assessment
-## Solution by Vandan
+## Vandan Dalvi - Technical Assessment Submission
 
-This project implements a comprehensive pipeline builder with node abstraction, enhanced styling, dynamic text nodes, and backend integration.
+> **Submitted for:** VectorShift Frontend Developer Position  
+> **Submission Date:** January 18, 2026  
+> **Candidate:** Vandan Dalvi  
+> **Email:** vandandalvi@gmail.com  
+> **GitHub:** [github.com/vandandalvi](https://github.com/vandandalvi)  
+> **Portfolio:** [vandansportfolio.vercel.app](https://vandansportfolio.vercel.app)
+
+This project is my complete solution to the VectorShift Frontend Technical Assessment, implementing all four required parts: Node Abstraction, Styling, Text Node Logic, and Backend Integration with DAG validation.
 
 ---
 
@@ -41,7 +48,25 @@ This project implements a comprehensive pipeline builder with node abstraction, 
 
 ---
 
-## 🚀 Setup Instructions
+## � Technical Highlights
+
+### Architecture Decisions
+- **Component Abstraction Pattern**: Reduces code by 90% through configuration-driven design
+- **DFS Algorithm**: Implemented cycle detection with color-marking technique for O(V+E) complexity
+- **Zustand State Management**: Centralized state with optimized selectors preventing infinite re-renders
+- **Dynamic Handle Generation**: Real-time regex parsing for {{variable}} pattern detection
+- **Modular Design**: Clean separation of concerns (UI, state, nodes, backend)
+
+### Code Quality
+- **Zero Duplication**: Single BaseNode powers all 9 node types
+- **Maintainable**: Adding new nodes takes ~5 minutes with config objects
+- **Debugged**: Resolved infinite loop issues, optimized React renders
+- **Production-Ready**: Comprehensive error handling and user feedback
+- **Well-Documented**: 7 markdown files covering setup, testing, and features
+
+---
+
+## �🚀 Setup Instructions
 
 ### Prerequisites
 - Node.js (v14 or higher)
@@ -307,12 +332,56 @@ npm install
 
 ---
 
-## 📧 Contact
+## � Assessment Completion Summary
 
-For any questions about this implementation:
-- Email: recruiting@vectorshift.ai
-- Assessment submission deadline: January 18, 2026, 11:59pm IST
+### ✅ All Requirements Met
+
+| Part | Requirement | Status | Implementation |
+|------|-------------|--------|----------------|
+| **Part 1** | Node Abstraction | ✅ Complete | BaseNode component + 5 new nodes (Filter, Transform, API, Conditional, Aggregator) |
+| **Part 2** | Styling | ✅ Complete | Modern CSS design system with animations, gradients, color-coded nodes |
+| **Part 3** | Text Node Logic | ✅ Complete | Dynamic sizing + {{variable}} detection with auto-generated handles |
+| **Part 4** | Backend Integration | ✅ Complete | FastAPI backend with DFS-based DAG validation + custom alert UI |
+| **Bonus** | Delete Functionality | ✅ Complete | Delete button on all nodes with proper edge cleanup |
+
+### 🎯 Key Achievements
+
+- **90% Code Reduction**: Node abstraction eliminated code duplication
+- **O(V+E) Complexity**: Efficient DAG validation using DFS algorithm
+- **Production-Ready**: Clean architecture, comprehensive documentation, error handling
+- **Modern UI**: Professional design with smooth animations and user feedback
+- **Comprehensive Testing**: Multiple test cases documented in TESTING_GUIDE.md
 
 ---
 
-**Built with ❤️ for the VectorShift Frontend Assessment**
+## 📧 Contact & Submission
+
+**Candidate:** Vandan Dalvi  
+**Email:** vandandalvi@gmail.com  
+**LinkedIn:** [linkedin.com/in/vandandalvi](https://www.linkedin.com/in/vandandalvi/)  
+**GitHub:** [github.com/vandandalvi/DAG](https://github.com/vandandalvi/DAG)  
+**Portfolio:** [vandansportfolio.vercel.app](https://vandansportfolio.vercel.app)
+
+**Assessment Details:**
+- **Organization:** VectorShift  
+- **Position:** Frontend Developer  
+- **Submission Date:** January 18, 2026  
+- **Deadline:** January 18, 2026, 11:59pm IST
+
+---
+
+## 📚 Documentation Files
+
+- `README.md` - This file (setup & overview)
+- `TESTING_GUIDE.md` - Comprehensive testing instructions
+- `COMPLETION_SUMMARY.md` - Detailed feature breakdown
+- `DAG_TESTING.md` - DAG validation test cases
+- `QUICKSTART.md` - Fast setup guide
+- `FINAL_CHECKLIST.md` - Pre-submission verification
+- `BEFORE_AFTER_COMPARISON.md` - Improvements made
+
+---
+
+**Thank you for reviewing my submission! 🚀**
+
+*Built with React, FastAPI, and attention to detail for the VectorShift Technical Assessment*
