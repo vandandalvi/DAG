@@ -1,91 +1,135 @@
-# VectorShift Frontend Technical Assessment
-## Vandan Dalvi - Technical Assessment Submission
+# DAG Pipeline Builder
+## Visual Node-Based Workflow System with DAG Validation
 
-> **Submitted for:** VectorShift Frontend Developer Position  
-> **Submission Date:** January 18, 2026  
-> **Candidate:** Vandan Dalvi  
-> **Email:** vandandalvi@gmail.com  
-> **GitHub:** [github.com/vandandalvi](https://github.com/vandandalvi)  
-> **Portfolio:** [vandansportfolio.vercel.app](https://vandansportfolio.vercel.app)
+> A production-ready React application for building and validating directed acyclic graphs (DAGs) through an intuitive drag-and-drop interface. Features real-time variable detection, node abstraction architecture, and backend validation.
 
-This project is my complete solution to the VectorShift Frontend Technical Assessment, implementing all four required parts: Node Abstraction, Styling, Text Node Logic, and Backend Integration with DAG validation.
+**Author:** Vandan Dalvi  
+**Tech Stack:** React.js, ReactFlow, Zustand, FastAPI, Python  
+**Live Demo:** [GitHub Repository](https://github.com/vandandalvi/DAG)
 
----
-
-## 🎯 Features Implemented
-
-### Part 1: Node Abstraction ✅
-- **BaseNode Component**: A flexible, reusable abstraction for all node types
-- **Configuration-based Nodes**: Nodes defined through simple config objects
-- **Zero Code Duplication**: All nodes share the same underlying component
-- **5 New Nodes Created**:
-  1. **Filter Node** - Filter data based on conditions
-  2. **Transform Node** - Transform text (uppercase, lowercase, trim, reverse)
-  3. **API Node** - Make HTTP API requests
-  4. **Conditional Node** - Route based on conditional logic
-  5. **Aggregator Node** - Combine multiple inputs
-
-### Part 2: Styling ✅
-- **Modern CSS Design System**: Custom CSS with CSS variables
-- **Polished UI**: Professional gradient buttons, hover effects, shadows
-- **Color-coded Nodes**: Each node type has a unique background color
-- **Responsive Design**: Works on different screen sizes
-- **Smooth Animations**: Transitions and hover effects throughout
-
-### Part 3: Text Node Logic ✅
-- **Dynamic Sizing**: Node width and height adjust based on text content
-- **Variable Detection**: Automatically detects `{{variableName}}` patterns
-- **Dynamic Handles**: Creates input handles on the left for each variable
-- **Visual Feedback**: Shows detected variables with badges
-- **Auto-expanding Textarea**: Grows with content
-
-### Part 4: Backend Integration ✅
-- **Frontend to Backend**: Submit button sends nodes and edges to backend
-- **DAG Validation**: Backend checks if pipeline is a Directed Acyclic Graph
-- **Custom Alert**: Beautiful modal displaying analysis results
-- **Error Handling**: Graceful handling of connection issues
-- **CORS Configured**: Backend properly configured for frontend requests
+[![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green.svg)](https://fastapi.tiangolo.com/)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 ---
 
-## � Technical Highlights
+## 🚀 Project Overview
 
-### Architecture Decisions
-- **Component Abstraction Pattern**: Reduces code by 90% through configuration-driven design
-- **DFS Algorithm**: Implemented cycle detection with color-marking technique for O(V+E) complexity
-- **Zustand State Management**: Centralized state with optimized selectors preventing infinite re-renders
-- **Dynamic Handle Generation**: Real-time regex parsing for {{variable}} pattern detection
-- **Modular Design**: Clean separation of concerns (UI, state, nodes, backend)
-
-### Code Quality
-- **Zero Duplication**: Single BaseNode powers all 9 node types
-- **Maintainable**: Adding new nodes takes ~5 minutes with config objects
-- **Debugged**: Resolved infinite loop issues, optimized React renders
-- **Production-Ready**: Comprehensive error handling and user feedback
-- **Well-Documented**: 7 markdown files covering setup, testing, and features
+DAG Pipeline Builder is a visual programming interface that allows users to create complex data workflows by connecting nodes. Built with React and FastAPI, it features intelligent node abstraction, real-time variable parsing, and sophisticated graph validation algorithms.
 
 ---
 
-## �🚀 Setup Instructions
+## ✨ Key Features
+
+### 🎯 Smart Node Abstraction
+- **Single Component Architecture**: One BaseNode component powers 9+ node types
+- **Configuration-Driven**: Add new nodes in minutes with simple config objects
+- **90% Code Reduction**: Eliminated repetitive boilerplate through abstraction
+- **Extensible Design**: Easy to add custom node types and behaviors
+
+### 🎨 Modern UI/UX
+- **Drag-and-Drop Interface**: Intuitive ReactFlow-based canvas
+- **Color-Coded Nodes**: Visual distinction for different node types
+- **Smooth Animations**: Professional transitions and hover effects
+- **Responsive Design**: Works seamlessly across screen sizes
+- **Custom Styling System**: CSS variables for consistent theming
+
+### 🧠 Intelligent Text Processing
+- **Dynamic Node Sizing**: Automatically adjusts to content
+- **Variable Detection**: Real-time parsing of `{{variable}}` patterns
+- **Auto-Handle Generation**: Creates connection points for detected variables
+- **Visual Feedback**: Badges show detected variables and counts
+- **Regex-Based Parser**: Efficient pattern matching
+
+### 🔧 Backend Integration
+- **FastAPI Backend**: High-performance Python API
+- **DAG Validation**: Sophisticated cycle detection algorithm
+- **Graph Analysis**: Returns node count, edge count, and validity
+- **DFS Algorithm**: O(V+E) time complexity with color-marking
+- **CORS Support**: Proper cross-origin configuration
+
+### 🎁 Additional Features
+- **Delete Functionality**: Remove nodes with proper edge cleanup
+- **State Management**: Zustand for efficient, centralized state
+- **Error Handling**: Graceful degradation and user feedback
+- **Custom Alerts**: Beautiful modal for backend responses
+- **Comprehensive Docs**: Multiple guides for setup and testing
+
+---
+
+## 🛠️ Technology Stack
+
+### Frontend
+- **React 18.2.0** - UI framework
+- **ReactFlow 11.8.3** - Node-based interface
+- **Zustand 4.4.1** - State management
+- **CSS3** - Custom styling system
+- **JavaScript ES6+** - Modern syntax
+
+### Backend
+- **Python 3.x** - Backend language
+- **FastAPI** - Web framework
+- **Uvicorn** - ASGI server
+- **Pydantic** - Data validation
+
+### Algorithms
+- **Depth-First Search (DFS)** - Cycle detection
+- **Graph Theory** - DAG validation
+- **Regex Parsing** - Variable extraction
+
+---
+
+## 🎯 Use Cases
+
+- **Data Pipeline Builders** - Visual ETL workflows
+- **Workflow Automation** - Business process modeling
+- **ML Pipeline Design** - Machine learning workflows
+- **API Orchestration** - Visual API composition
+- **Logic Flow Design** - Conditional routing systems
+
+---
+
+## 💡 Technical Highlights
+
+### Architecture & Design Patterns
+- **Component Abstraction**: Configuration-driven node system reduces code by 90%
+- **DFS Cycle Detection**: Efficient O(V+E) algorithm with color-marking technique
+- **Optimized State Management**: Zustand selectors prevent infinite re-renders
+- **Dynamic Handle System**: Real-time regex parsing for {{variable}} pattern detection
+- **Separation of Concerns**: Clean modular architecture (UI, state, nodes, API)
+
+### Code Quality & Best Practices
+- **DRY Principle**: Single BaseNode component for all node types
+- **Scalable Design**: Adding new nodes takes ~5 minutes
+- **Performance Optimized**: Resolved render issues, efficient React patterns
+- **Error Resilience**: Comprehensive error handling and user feedback
+- **Production-Ready**: Well-tested, documented, and maintainable
+
+### Problem Solving
+- **Infinite Loop Resolution**: Debugged and fixed useEffect dependencies
+- **Selector Optimization**: Implemented stable references for Zustand
+- **CORS Configuration**: Proper backend setup for API communication
+- **State Initialization**: Fixed nodeIDs tracking for dynamic handle management
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
 - Node.js (v14 or higher)
 - Python 3.8 or higher
-- pip
+- npm and pip
 
 ### Frontend Setup
 
 ```bash
 # Navigate to frontend directory
-cd c:\projects\vectorShift\frontend
+cd frontend
 
 # Install dependencies
 npm install
 
-# Install zustand (state management)
-npm install zustand
-
-# Start the development server
+# Start development server
 npm start
 ```
 
@@ -95,7 +139,7 @@ The frontend will open at `http://localhost:3000`
 
 ```bash
 # Navigate to backend directory
-cd c:\projects\vectorShift\backend
+cd backend
 
 # Install Python dependencies
 pip install fastapi uvicorn pydantic
@@ -106,34 +150,47 @@ uvicorn main:app --reload
 
 The backend will run at `http://localhost:8000`
 
+### Quick Start
+
+```bash
+# Clone the repository
+git clone https://github.com/vandandalvi/DAG.git
+cd DAG
+
+# Start backend (Terminal 1)
+cd backend && pip install fastapi uvicorn pydantic && uvicorn main:app --reload
+
+# Start frontend (Terminal 2)
+cd frontend && npm install && npm start
+```
+
 ---
 
 ## 📁 Project Structure
 
 ```
-vectorShift/
+DAG/
 ├── frontend/
 │   ├── src/
 │   │   ├── nodes/
 │   │   │   ├── BaseNode.js           # Core abstraction component
 │   │   │   ├── nodeConfigs.js        # Configuration for all nodes
 │   │   │   ├── EnhancedTextNode.js   # Dynamic text node with variables
-│   │   │   ├── inputNode.js          # Refactored input node
-│   │   │   ├── outputNode.js         # Refactored output node
-│   │   │   ├── llmNode.js            # Refactored LLM node
-│   │   │   ├── textNode.js           # Refactored text node
-│   │   │   ├── filterNode.js         # New filter node
-│   │   │   ├── transformNode.js      # New transform node
-│   │   │   ├── apiNode.js            # New API node
-│   │   │   ├── conditionalNode.js    # New conditional node
-│   │   │   └── aggregatorNode.js     # New aggregator node
+│   │   │   ├── inputNode.js          # Input node
+│   │   │   ├── outputNode.js         # Output node
+│   │   │   ├── llmNode.js            # LLM node
+│   │   │   ├── textNode.js           # Text node
+│   │   │   ├── filterNode.js         # Filter node
+│   │   │   ├── transformNode.js      # Transform node
+│   │   │   ├── apiNode.js            # API node
+│   │   │   ├── conditionalNode.js    # Conditional node
+│   │   │   └── aggregatorNode.js     # Aggregator node
 │   │   ├── App.js                    # Main app component
 │   │   ├── ui.js                     # ReactFlow canvas
 │   │   ├── toolbar.js                # Node toolbar
 │   │   ├── submit.js                 # Submit button with backend integration
 │   │   ├── store.js                  # Zustand state management
-│   │   ├── styles.css                # Comprehensive styling
-│   │   └── ...
+│   │   └── styles.css                # Comprehensive styling
 │   └── package.json
 └── backend/
     └── main.py                       # FastAPI backend with DAG validation
@@ -141,173 +198,97 @@ vectorShift/
 
 ---
 
-## 🎨 Node Abstraction Architecture
+## 🎬 Available Node Types
 
-### How It Works
+| Node | Description | Inputs | Outputs | Use Case |
+|------|-------------|--------|---------|----------|
+| **Input** | Data source node | - | 1 | Starting point for pipelines |
+| **Output** | Data sink node | 1 | - | Final destination for data |
+| **LLM** | Language model processing | 3 (System, Context, Prompt) | 1 (Response) | AI text generation |
+| **Text** | Dynamic text with variables | Dynamic (based on {{vars}}) | 1 | Template processing |
+| **Filter** | Conditional filtering | 1 (Data) | 1 (Filtered) | Data filtering |
+| **Transform** | Data transformation | 1 (Input) | 1 (Output) | Text manipulation |
+| **API** | HTTP request handler | 2 (URL, Method) | 1 (Response) | External API calls |
+| **Conditional** | Logic routing | 1 (Condition) | 2 (True/False) | Branching logic |
+| **Aggregator** | Multi-input combiner | 3 (Input 1-3) | 1 (Combined) | Data aggregation |
 
-The `BaseNode` component accepts a configuration object that defines:
-- **Title**: Node display name
-- **Description**: Optional description text
-- **Fields**: Array of input fields (text, textarea, select, number, checkbox)
-- **Handles**: Input/output connection points
-- **Style**: Custom styling overrides
-- **Dynamic Handles**: Support for variable-based connections
+---
 
-### Creating a New Node (Example)
+## 🎨 Creating New Nodes
+
+### Step 1: Define Configuration
 
 ```javascript
-// 1. Define configuration in nodeConfigs.js
+// In nodeConfigs.js
 export const myNewNodeConfig = {
   title: 'My New Node',
-  description: 'Does something cool',
+  description: 'Does something amazing',
   fields: [
     {
-      name: 'myField',
-      label: 'My Field',
+      name: 'fieldName',
+      label: 'Field Label',
       type: 'text',
-      defaultValue: 'default value',
+      defaultValue: 'default',
+      placeholder: 'Enter value...'
     }
   ],
   handles: {
-    inputs: [{ id: 'input1' }],
-    outputs: [{ id: 'output1' }]
+    inputs: [{ id: 'input1', label: 'Input' }],
+    outputs: [{ id: 'output1', label: 'Output' }]
   },
   style: {
-    background: '#e0f2fe',
+    background: '#gradient-colors'
   }
 };
+```
 
-// 2. Create node file (myNewNode.js)
+### Step 2: Create Node File
+
+```javascript
+// myNewNode.js
 import { createNodeFromConfig } from './BaseNode';
 import { myNewNodeConfig } from './nodeConfigs';
 
 export const MyNewNode = createNodeFromConfig(myNewNodeConfig);
+```
 
-// 3. Register in ui.js
+### Step 3: Register in UI
+
+```javascript
+// In ui.js
 import { MyNewNode } from './nodes/myNewNode';
 
 const nodeTypes = {
-  // ... existing nodes
-  myNew: MyNewNode,
+  ...existing,
+  myNewNode: MyNewNode
 };
-
-// 4. Add to toolbar.js
-<DraggableNode type='myNew' label='My New' />
 ```
 
-That's it! No need to write any JSX or handle state management.
+### Step 4: Add to Toolbar
+
+```javascript
+// In toolbar.js
+<DraggableNode type='myNewNode' label='My New Node' />
+```
+
+**That's it! New node ready in minutes.** 🚀
 
 ---
 
-## 🔧 Key Technical Features
+## 🧪 Testing
 
-### BaseNode Capabilities
-- ✅ Multiple field types (text, textarea, select, number, checkbox)
-- ✅ Dynamic handle positioning
-- ✅ Variable extraction from text ({{variable}})
-- ✅ Custom styling per node
-- ✅ Automatic state management
+### Manual Testing
+1. Open application at `http://localhost:3000`
+2. Drag nodes from toolbar to canvas
+3. Connect nodes by dragging from output handles to input handles
+4. Fill in node fields
+5. Click "Submit Pipeline" to validate
 
-### Text Node Features
-- ✅ Auto-expanding textarea
-- ✅ Dynamic width (220px - 500px)
-- ✅ Variable detection with regex
-- ✅ Visual variable badges
-- ✅ Dynamic handle creation
+### DAG Validation Testing
+- **Valid DAG**: Linear chains, branching without cycles
+- **Invalid DAG**: Create A→B→C→A (triangle cycle)
 
-### Backend Features
-- ✅ DFS-based cycle detection
-- ✅ DAG validation algorithm
-- ✅ CORS configured for frontend
-- ✅ Pydantic models for type safety
-- ✅ Comprehensive error handling
-
----
-
-## 🎯 Testing the Application
-
-### Test Scenario 1: Basic Pipeline
-1. Drag an **Input** node onto the canvas
-2. Drag an **LLM** node
-3. Drag an **Output** node
-4. Connect: Input → LLM → Output
-5. Click **Submit Pipeline**
-6. Alert should show: 3 nodes, 2 edges, is_dag: true
-
-### Test Scenario 2: Text Node with Variables
-1. Drag a **Text** node onto the canvas
-2. Type in the textarea: `Hello {{name}}, your age is {{age}}`
-3. Observe: Two handles appear on the left (name, age)
-4. Watch the node expand as you type more
-
-### Test Scenario 3: Cycle Detection
-1. Create nodes: A → B → C → A (creates a cycle)
-2. Click **Submit Pipeline**
-3. Alert should show: is_dag: false with warning message
-
-### Test Scenario 4: New Nodes
-1. Try all 5 new nodes: Filter, Transform, API, Conditional, Aggregator
-2. Each has unique configurations and multiple handles
-3. Create complex pipelines with branching logic
-
----
-
-## 🎬 Screen Recording Checklist
-
-When recording your demo, cover:
-- [ ] Overview of the polished UI design
-- [ ] Demonstrate node abstraction by showing multiple node types
-- [ ] Create a Text node and show variable detection
-- [ ] Show dynamic sizing of Text node
-- [ ] Create a complete pipeline
-- [ ] Submit and show the alert with results
-- [ ] Create a pipeline with a cycle and show DAG validation
-- [ ] Briefly explain the BaseNode architecture in code
-- [ ] Show how easy it is to create new nodes (open nodeConfigs.js)
-
----
-
-## 🏗️ Code Architecture Highlights
-
-### Abstraction Benefits
-- **90% less code** per node (from ~40 lines to ~4 lines)
-- **Single source of truth** for node behavior
-- **Easy maintenance** - style changes apply to all nodes
-- **Rapid prototyping** - new nodes in minutes
-- **Type safety** through configuration objects
-
-### Styling Approach
-- **CSS Variables** for consistent theming
-- **Utility classes** for common patterns
-- **Component-specific classes** for detailed styling
-- **No inline styles** in components (except dynamic values)
-- **Responsive design** with media queries
-
-### Backend Design
-- **Clean separation** of concerns
-- **Efficient algorithm** - O(V+E) DFS for cycle detection
-- **Type validation** with Pydantic
-- **RESTful API** design
-- **Extensible** for future features
-
----
-
-## 📝 Notes for Reviewers
-
-### Design Decisions
-1. **BaseNode over HOC**: Chose render props pattern for clarity and flexibility
-2. **Configuration Objects**: Easier to read and modify than JSX
-3. **Enhanced TextNode**: Separate from BaseNode for specialized behavior
-4. **CSS over styled-components**: Lighter weight, better performance
-5. **DFS for DAG**: Standard, efficient algorithm with clear implementation
-
-### Future Improvements
-- Add undo/redo functionality
-- Persist pipelines to backend
-- Add node search/filter in toolbar
-- Implement node validation rules
-- Add keyboard shortcuts
-- Export pipeline as JSON/image
+See `TESTING_GUIDE.md` for comprehensive test cases.
 
 ---
 
@@ -322,66 +303,80 @@ npm install
 
 ### Backend connection error
 - Ensure backend is running on port 8000
-- Check CORS configuration in main.py
-- Verify fetch URL in submit.js
+- Check CORS configuration in `main.py`
+- Verify fetch URL in `submit.js`
 
 ### Nodes not appearing
 - Check browser console for errors
-- Verify node is registered in ui.js nodeTypes
+- Verify node is registered in `ui.js` nodeTypes
 - Ensure toolbar includes the DraggableNode
 
 ---
 
-## � Assessment Completion Summary
+## 🔮 Future Enhancements
 
-### ✅ All Requirements Met
-
-| Part | Requirement | Status | Implementation |
-|------|-------------|--------|----------------|
-| **Part 1** | Node Abstraction | ✅ Complete | BaseNode component + 5 new nodes (Filter, Transform, API, Conditional, Aggregator) |
-| **Part 2** | Styling | ✅ Complete | Modern CSS design system with animations, gradients, color-coded nodes |
-| **Part 3** | Text Node Logic | ✅ Complete | Dynamic sizing + {{variable}} detection with auto-generated handles |
-| **Part 4** | Backend Integration | ✅ Complete | FastAPI backend with DFS-based DAG validation + custom alert UI |
-| **Bonus** | Delete Functionality | ✅ Complete | Delete button on all nodes with proper edge cleanup |
-
-### 🎯 Key Achievements
-
-- **90% Code Reduction**: Node abstraction eliminated code duplication
-- **O(V+E) Complexity**: Efficient DAG validation using DFS algorithm
-- **Production-Ready**: Clean architecture, comprehensive documentation, error handling
-- **Modern UI**: Professional design with smooth animations and user feedback
-- **Comprehensive Testing**: Multiple test cases documented in TESTING_GUIDE.md
+- **Undo/Redo**: Command pattern for action history
+- **Pipeline Persistence**: Save/load workflows from backend
+- **Node Search**: Filter toolbar by node name or type
+- **Validation Rules**: Custom validation for node connections
+- **Keyboard Shortcuts**: Improve workflow efficiency
+- **Export Options**: JSON, PNG, or SVG export
+- **Collaboration**: Multi-user real-time editing
+- **Version Control**: Track pipeline changes over time
 
 ---
 
-## 📧 Contact & Submission
+## 🤝 Contributing
 
-**Candidate:** Vandan Dalvi  
-**Email:** vandandalvi@gmail.com  
-**LinkedIn:** [linkedin.com/in/vandandalvi](https://www.linkedin.com/in/vandandalvi/)  
-**GitHub:** [github.com/vandandalvi/DAG](https://github.com/vandandalvi/DAG)  
-**Portfolio:** [vandansportfolio.vercel.app](https://vandansportfolio.vercel.app)
+Contributions are welcome! Here's how:
 
-**Assessment Details:**
-- **Organization:** VectorShift  
-- **Position:** Frontend Developer  
-- **Submission Date:** January 18, 2026  
-- **Deadline:** January 18, 2026, 11:59pm IST
+1. Fork the repository
+2. Create feature branch: `git checkout -b feature/amazing-feature`
+3. Commit changes: `git commit -m 'Add amazing feature'`
+4. Push to branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
 
 ---
 
-## 📚 Documentation Files
+## 📚 Documentation
 
-- `README.md` - This file (setup & overview)
-- `TESTING_GUIDE.md` - Comprehensive testing instructions
-- `COMPLETION_SUMMARY.md` - Detailed feature breakdown
-- `DAG_TESTING.md` - DAG validation test cases
-- `QUICKSTART.md` - Fast setup guide
-- `FINAL_CHECKLIST.md` - Pre-submission verification
-- `BEFORE_AFTER_COMPARISON.md` - Improvements made
+- **README.md** - Project overview and setup guide
+- **TESTING_GUIDE.md** - Comprehensive testing instructions
+- **COMPLETION_SUMMARY.md** - Detailed feature breakdown
+- **DAG_TESTING.md** - DAG validation test cases
+- **QUICKSTART.md** - Fast setup guide
 
 ---
 
-**Thank you for reviewing my submission! 🚀**
+## 📄 License
 
-*Built with React, FastAPI, and attention to detail for the VectorShift Technical Assessment*
+This project is licensed under the MIT License.
+
+---
+
+## 👨‍💻 Author
+
+**Vandan Dalvi**
+
+- 🌐 Portfolio: [vandansportfolio.vercel.app](https://vandansportfolio.vercel.app)
+- 💼 LinkedIn: [linkedin.com/in/vandandalvi](https://www.linkedin.com/in/vandandalvi/)
+- 🐙 GitHub: [@vandandalvi](https://github.com/vandandalvi)
+- 📧 Email: vandandalvi@gmail.com
+
+---
+
+## 🙏 Acknowledgments
+
+- **ReactFlow** - Powerful library for node-based interfaces
+- **FastAPI** - Modern, fast Python web framework  
+- **Zustand** - Simple and elegant state management
+
+---
+
+## ⭐ Show Your Support
+
+If you find this project useful, please consider giving it a star on GitHub!
+
+---
+
+*Built with React, FastAPI, and passion for clean code* 🚀
